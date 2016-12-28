@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ConsulSpike.AspNetCore", "src\ConsulSpike.AspNetCore\ConsulSpike.AspNetCore.xproj", "{6BBE30BC-81F0-4761-9116-ADC3260646C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsulSpike.AspNet", "src\ConsulSpike.AspNet\ConsulSpike.AspNet.csproj", "{50140959-C07E-40EF-B9DD-8CEB29F0ADEB}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ConsulSpike.MathService", "src\ConsulSpike.MathService\ConsulSpike.MathService.xproj", "{8EA0762F-E757-4C61-A8A6-67F305621D47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,21 @@ Global
 		{6BBE30BC-81F0-4761-9116-ADC3260646C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BBE30BC-81F0-4761-9116-ADC3260646C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BBE30BC-81F0-4761-9116-ADC3260646C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50140959-C07E-40EF-B9DD-8CEB29F0ADEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50140959-C07E-40EF-B9DD-8CEB29F0ADEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50140959-C07E-40EF-B9DD-8CEB29F0ADEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50140959-C07E-40EF-B9DD-8CEB29F0ADEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EA0762F-E757-4C61-A8A6-67F305621D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EA0762F-E757-4C61-A8A6-67F305621D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EA0762F-E757-4C61-A8A6-67F305621D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EA0762F-E757-4C61-A8A6-67F305621D47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6BBE30BC-81F0-4761-9116-ADC3260646C2} = {E8CC9E23-F3F5-4BC4-ADC5-EA8B230D9618}
+		{50140959-C07E-40EF-B9DD-8CEB29F0ADEB} = {E8CC9E23-F3F5-4BC4-ADC5-EA8B230D9618}
+		{8EA0762F-E757-4C61-A8A6-67F305621D47} = {E8CC9E23-F3F5-4BC4-ADC5-EA8B230D9618}
 	EndGlobalSection
 EndGlobal
