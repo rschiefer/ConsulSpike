@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@using (Html.BeginForm("Math", "Home"))
+{
+<div>
+    @Html.DropDownList("operation", new SelectList(new string[] { "add", "subtract", "multiply", "divide" }), "Operation")
+</div>
+<div>
+    @Html.TextArea("inputs")
+</div>
+<div>
+    <input type="submit" />
+</div>
+}
