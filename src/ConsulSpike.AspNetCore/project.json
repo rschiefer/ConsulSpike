@@ -15,7 +15,8 @@
     "FubarCoder.RestSharp.Portable.WebRequest": "4.0.7",
     "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
     "Microsoft.Extensions.Configuration.Json": "1.0.0",
-    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.1"
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.1",
+    "Consul": "0.7.0.5"
   },
 
   "tools": {
