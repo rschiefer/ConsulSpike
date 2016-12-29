@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text;
 using RestSharp.Portable;
 using RestSharp.Portable.WebRequest;
+using Microsoft.Extensions.Options;
+using ConsulSpike.AspNetCore.Config;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,6 +16,12 @@ namespace ConsulSpike.AspNetCore.Controllers
     [Route("[controller]/[action]")]
     public class HomeController : Controller
     {
+        private IOptions<ConfigData> _configData;
+
+        public HomeController(IOptions<ConfigData> configData)
+        {
+            _configData = configData;
+        }
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -24,7 +32,7 @@ namespace ConsulSpike.AspNetCore.Controllers
         {
             var result = string.Empty;
 
-            using (var client = new RestClient("http://localhost:22345/api/"))
+            using (var client = new RestClient(_configData.Value.ServiceUrl))
             {
                 var request = new RestRequest("math");
                 request.AddParameter("operation", operation);
