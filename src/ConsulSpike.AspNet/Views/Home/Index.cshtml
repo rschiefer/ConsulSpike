@@ -1,0 +1,29 @@
+﻿@{
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("Math", "Home"))
+        {
+            <div>
+                @Html.DropDownList("operation", new SelectList(new string[] { "add", "subtract", "multiply", "divide" }), "Operation")
+            </div>
+            <div>
+                @Html.TextArea("inputs")
+            </div>
+            <div>
+                <input type="submit" />
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -39,7 +39,7 @@ namespace ConsulSpike.AspNetCore
             services.Configure<ConfigData>(async config => {                
                 using (var client = new ConsulClient(clientConfig => clientConfig.Address = new Uri("http://192.168.99.100:8500/")))
                 {
-                    var getPair = await client.KV.Get("serviceUrl");
+                    var getPair = await client.KV.Get("serviceUrl2");
                     if (getPair.Response != null)
                     {
                         var serviceUrl = Encoding.UTF8.GetString(getPair.Response.Value, 0, getPair.Response.Value.Length);
