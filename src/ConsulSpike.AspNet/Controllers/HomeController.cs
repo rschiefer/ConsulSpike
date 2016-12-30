@@ -15,17 +15,17 @@ namespace ConsulSpike.AspNet.Controllers
     {
         private ConfigData _configData;
 
-        //public HomeController(IOptions<ConfigData> configData)
-        //{
-        //    _configData = configData.Value;
-        //}
+        public HomeController(IConfigDataProvider provider)
+        {
+            _configData = provider.GetConfigData();
+        }
         // GET: /<controller>/
         public ActionResult Index()
         {
             return View();
         }
 
-        public async Task<ActionResult> Math(string operation, string inputs)
+        public ActionResult Math(string operation, string inputs)
         {
             var result = string.Empty;
 
@@ -36,7 +36,7 @@ namespace ConsulSpike.AspNet.Controllers
             {
                 request.AddParameter("inputs", input.Trim());
             }
-            result = (await client.ExecuteTaskAsync<string>(request)).Content;            
+            result = client.ExecuteTaskAsync<string>(request).Result.Content;            
 
             var output = new StringBuilder();
             output.AppendLine($"operation = {operation}");
