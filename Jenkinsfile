@@ -9,5 +9,7 @@ node {
     
   	stage 'Archive'
 		archive '**/bin/Release/**'
+	
+	//just testing auto start of build
 
 }
